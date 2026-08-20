@@ -1,0 +1,634 @@
+/* MLS 2026 Predictor — Clean High-Contrast Sports-Analytics Theme */
+
+/* ── Global Overrides ── */
+[data-testid="stSidebarNav"] {
+    display: none !important;
+}
+
+[data-testid="stAppViewContainer"] {
+    background: #0f1923;
+    color: #f1f5f9;
+}
+
+[data-testid="stSidebar"] {
+    background: #141e2b !important;
+    border-right: 1px solid #2a3545;
+}
+
+/* ── Make Sidebar Content Start Higher Up ── */
+[data-testid="stSidebar"] [data-testid="stSidebarContent"],
+[data-testid="stSidebar"] [data-testid="stSidebarUserContent"],
+[data-testid="stSidebar"] > div:first-child,
+section[data-testid="stSidebar"] > div:first-child,
+[data-testid="stSidebar"] .block-container {
+    padding-top: 1rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
+    gap: 0.55rem !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] > div:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+/* ── Typography & Global Text Contrast ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #cbd5e1;
+}
+
+p, span, label, li {
+    color: #cbd5e1;
+}
+
+strong, b {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif !important;
+    color: #f8fafc !important;
+    font-weight: 700;
+}
+
+/* Equal Height Column Utility for Streamlit */
+div[data-testid="column"] {
+    display: flex !important;
+    flex-direction: column !important;
+}
+div[data-testid="column"] > div {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+}
+div[data-testid="column"] [data-testid="stMarkdownContainer"] {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    height: 100% !important;
+}
+
+/* ── Metric cards ── */
+[data-testid="stMetric"] {
+    background: #1a2332;
+    border: 1px solid #2a3545;
+    border-radius: 10px;
+    padding: 1.1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
+}
+
+[data-testid="stMetricValue"] {
+    font-family: 'Inter', sans-serif !important;
+    color: #ffffff !important;
+    font-weight: 800;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #cbd5e1 !important;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+[data-testid="stMetricDelta"] {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600;
+}
+
+/* ── Buttons ── */
+.stButton > button {
+    background: #1D428A;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.stButton > button:hover {
+    background: #25518f;
+    border-color: #38bdf8;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+.stButton > button:active {
+    background: #163670;
+}
+
+/* ── Selectbox / Input / Slider ── */
+[data-testid="stSelectbox"] label,
+[data-testid="stSlider"] label,
+.stTextInput label {
+    color: #e2e8f0 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+[data-testid="stSelectbox"] > div > div {
+    background: #1a2332 !important;
+    border: 1px solid #2a3545 !important;
+    border-radius: 8px !important;
+    color: #f8fafc !important;
+}
+
+.stTextInput > div > div > input {
+    background: #1a2332 !important;
+    border: 1px solid #2a3545 !important;
+    border-radius: 8px !important;
+    color: #f8fafc !important;
+}
+
+[data-testid="stSlider"] > div > div > div {
+    color: #f8fafc !important;
+    font-weight: 600;
+}
+
+.stSlider [data-baseweb="slider"] div[role="slider"] {
+    background: #38bdf8 !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* ── DataFrames / Tables ── */
+[data-testid="stDataFrame"] {
+    border: 1px solid #2a3545;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ── Tabs ── */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 6px;
+    background: #141e2b;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #2a3545;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #cbd5e1;
+    padding: 0.65rem 1.3rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+.stTabs [aria-selected="true"] {
+    background: #1D428A !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(29, 66, 138, 0.4);
+}
+
+.stTabs [data-baseweb="tab-highlight"] {
+    background-color: #38bdf8 !important;
+}
+
+/* ── Divider ── */
+hr {
+    border-color: #2a3545 !important;
+    opacity: 0.8;
+}
+
+/* ── Info/Warning/Alert boxes ── */
+[data-testid="stAlert"] {
+    background: #1a2332 !important;
+    border: 1px solid #2a3545 !important;
+    border-radius: 8px !important;
+    color: #f1f5f9 !important;
+}
+
+/* ── Plotly chart container ── */
+.js-plotly-plot .plotly .modebar {
+    background: transparent !important;
+}
+
+/* ── Card class ── */
+.glass-card {
+    background: #1a2332;
+    border: 1px solid #2a3545;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ── Form result pills (W/D/L) ── */
+.form-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.78rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-pill-w { background: rgba(34, 197, 94, 0.22); color: #4ade80; }
+.form-pill-d { background: rgba(234, 179, 8, 0.22); color: #facc15; }
+.form-pill-l { background: rgba(239, 68, 68, 0.22); color: #f87171; }
+
+/* ── Progress bars ── */
+.stProgress > div > div > div > div {
+    background: #38bdf8;
+}
+
+/* ── Spinner ── */
+.stSpinner > div > div {
+    border-top-color: #38bdf8 !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f1923;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a3545;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a4a5e;
+}
+
+/* ── Expander ── */
+[data-testid="stExpander"] {
+    background: #1a2332;
+    border: 1px solid #2a3545;
+    border-radius: 10px;
+}
+
+[data-testid="stExpander"] details summary {
+    color: #f1f5f9 !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stExpander"] details summary:hover {
+    color: #38bdf8 !important;
+}
+
+/* ── Sidebar walkthrough ── */
+.sidebar-section {
+    background: #1a2332;
+    border: 1px solid #2a3545;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-section-title {
+    color: #f8fafc;
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.sidebar-section-body {
+    color: #cbd5e1;
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+/* ── Team selector area ── */
+.team-selector-area {
+    background: #141e2b;
+    border: 1px solid #2a3545;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ── Bracket color classes ── */
+.bracket-bye { background: rgba(34, 197, 94, 0.18); border-left: 3px solid #22c55e; color: #dcfce7; }
+.bracket-top4 { background: rgba(59, 130, 246, 0.18); border-left: 3px solid #3b82f6; color: #dbeafe; }
+.bracket-playoff { background: rgba(234, 179, 8, 0.16); border-left: 3px solid #eab308; color: #fef9c3; }
+.bracket-eliminated { background: rgba(239, 68, 68, 0.16); border-left: 3px solid #ef4444; color: #fee2e2; }
+
+/* ── Sidebar Nav Segmented Control (Equidistant, Full-Width & High Contrast) ── */
+[data-testid="stSidebar"] div:has(> [role="radiogroup"]),
+[data-testid="stSidebar"] [data-testid="stElementContainer"]:has([role="radiogroup"]),
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"],
+[data-testid="stSidebar"] div:has(> [data-testid="stSegmentedControl"]) {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 0.85rem !important;
+    margin-bottom: 0.85rem !important;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"],
+[data-testid="stSidebar"] [role="radiogroup"][data-orientation="horizontal"],
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] > div {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: stretch !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    background: #0b131b !important;
+    border: 1px solid #223042 !important;
+    border-radius: 9px !important;
+    padding: 4px !important;
+    gap: 6px !important;
+}
+
+/* Base button styling */
+[data-testid="stSidebar"] [role="radiogroup"] button,
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button,
+[data-testid="stSidebar"] button[data-variant="segmented_control"],
+[data-testid="stSidebar"] [data-testid="stSegmentedControlOption"] {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    width: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 0.4rem !important;
+    border: 1px solid transparent !important;
+    cursor: pointer !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Unselected State (Dashboard or How MLS Works when not active) */
+[data-testid="stSidebar"] [role="radiogroup"] button:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]),
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]),
+[data-testid="stSidebar"] button[data-variant="segmented_control"]:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]) {
+    background: rgba(22, 33, 49, 0.8) !important;
+    color: #cbd5e1 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] button:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]) *,
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]) *,
+[data-testid="stSidebar"] button[data-variant="segmented_control"]:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]) * {
+    color: #cbd5e1 !important;
+    font-weight: 600 !important;
+}
+
+/* Unselected Hover State */
+[data-testid="stSidebar"] [role="radiogroup"] button:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]):hover,
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]):hover,
+[data-testid="stSidebar"] button[data-variant="segmented_control"]:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]):hover {
+    background: rgba(56, 189, 248, 0.18) !important;
+    border-color: rgba(56, 189, 248, 0.45) !important;
+    color: #ffffff !important;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] button:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]):hover *,
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]):hover *,
+[data-testid="stSidebar"] button[data-variant="segmented_control"]:not([aria-checked="true"]):not([aria-pressed="true"]):not([data-checked="true"]):hover * {
+    color: #ffffff !important;
+}
+
+/* SELECTED State (Dashboard or How MLS Works) - High Contrast Vivid Blue with Glow */
+[data-testid="stSidebar"] [role="radiogroup"] button[aria-checked="true"],
+[data-testid="stSidebar"] [role="radiogroup"] button[aria-pressed="true"],
+[data-testid="stSidebar"] [role="radiogroup"] button[aria-selected="true"],
+[data-testid="stSidebar"] [role="radiogroup"] button[data-checked="true"],
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button[aria-checked="true"],
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button[aria-pressed="true"],
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button[aria-selected="true"],
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button[data-checked="true"],
+[data-testid="stSidebar"] button[data-variant="segmented_control"][aria-checked="true"],
+[data-testid="stSidebar"] button[data-variant="segmented_control"][aria-pressed="true"],
+[data-testid="stSidebar"] button[data-variant="segmented_control"][data-checked="true"] {
+    background: linear-gradient(135deg, #1D428A 0%, #0284c7 100%) !important;
+    background-color: #0284c7 !important;
+    color: #ffffff !important;
+    border: 1px solid #38bdf8 !important;
+    box-shadow: 0 2px 12px rgba(2, 132, 199, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] button[aria-checked="true"] *,
+[data-testid="stSidebar"] [role="radiogroup"] button[aria-pressed="true"] *,
+[data-testid="stSidebar"] [role="radiogroup"] button[aria-selected="true"] *,
+[data-testid="stSidebar"] [role="radiogroup"] button[data-checked="true"] *,
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button[aria-checked="true"] *,
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button[aria-pressed="true"] *,
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button[aria-selected="true"] *,
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button[data-checked="true"] *,
+[data-testid="stSidebar"] button[data-variant="segmented_control"][aria-checked="true"] *,
+[data-testid="stSidebar"] button[data-variant="segmented_control"][aria-pressed="true"] *,
+[data-testid="stSidebar"] button[data-variant="segmented_control"][data-checked="true"] * {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+    letter-spacing: 0.2px !important;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] button *,
+[data-testid="stSidebar"] [data-testid="stSegmentedControl"] button * {
+    white-space: nowrap !important;
+    font-size: 0.82rem !important;
+    text-align: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+}
+
+.created-by-label {
+    color: #cbd5e1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.45rem;
+    letter-spacing: 0.3px;
+}
+
+/* ── LinkedIn Button ── */
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #0A66C2 0%, #004182 100%);
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 0.5rem 1.1rem;
+    border-radius: 8px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(10, 102, 194, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.linkedin-btn:hover {
+    background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(10, 102, 194, 0.5);
+    color: #ffffff !important;
+}
+
+/* ── Sidebar Navigation Widget ── */
+.sidebar-widget {
+    background: #141e2b;
+    border: 1px solid #243346;
+    border-radius: 12px;
+    padding: 0.85rem;
+    margin: 0 0 0.8rem 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-widget-header {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.65rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sidebar-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.48rem 0.65rem;
+    border-radius: 8px;
+    background: rgba(26, 35, 50, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    color: #cbd5e1 !important;
+    text-decoration: none !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-nav-item:hover {
+    background: rgba(56, 189, 248, 0.14) !important;
+    border-color: rgba(56, 189, 248, 0.45) !important;
+    color: #ffffff !important;
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.nav-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #38bdf8;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-nav-item:hover .nav-item-icon {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.nav-item-text {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-item-arrow {
+    font-size: 0.8rem;
+    color: #64748b;
+    opacity: 0.6;
+    transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-nav-item:hover .nav-item-arrow {
+    color: #38bdf8;
+    opacity: 1;
+    transform: translateX(2px);
+}
+
+/* ── Simplified Minimalist Model Badge ── */
+.model-simple-badge {
+    text-align: center;
+    padding: 0.55rem 0.8rem;
+    margin: 0.65rem 0 0.5rem 0;
+    background: rgba(20, 30, 43, 0.7);
+    border: 1px solid #243346;
+    border-radius: 9px;
+}
+
+.model-simple-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.model-simple-pill {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.28);
+    padding: 0.1rem 0.45rem;
+    border-radius: 5px;
+}
+
+.model-simple-sub {
+    color: #94a3b8;
+    font-size: 0.73rem;
+    margin-top: 0.25rem;
+    line-height: 1.35;
+}
+
+.creator-card {
+    text-align: center;
+    padding: 0.35rem 0 0.2rem 0;
+}
+
+

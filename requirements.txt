@@ -1,0 +1,30 @@
+# Core
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+scipy
+requests
+
+# Explainability
+shap>=0.43
+
+# Visualization
+plotly>=5.18
+
+# Streamlit Dashboard
+streamlit>=1.30
+
+# Data persistence
+pyarrow
+joblib
+
+# Notebooks (optional)
+# jupyter
+# ipykernel
+
+# Gradient Boosting (optional — not used in simplified v3)
+# xgboost>=2.0
+# lightgbm>=4.0
+
+# ASA API (optional)
+# itscalledsoccer>=0.4

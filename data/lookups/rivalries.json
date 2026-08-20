@@ -1,0 +1,24 @@
+{
+  "rivalries": [
+    {"teams": ["Los Angeles FC", "Los Angeles Galaxy"], "name": "El Tráfico", "intensity": 10},
+    {"teams": ["New York City", "New York Red Bulls"], "name": "Hudson River Derby", "intensity": 9},
+    {"teams": ["Portland Timbers", "Seattle Sounders"], "name": "Cascadia Cup", "intensity": 10},
+    {"teams": ["Portland Timbers", "Vancouver Whitecaps"], "name": "Cascadia Cup", "intensity": 8},
+    {"teams": ["Seattle Sounders", "Vancouver Whitecaps"], "name": "Cascadia Cup", "intensity": 8},
+    {"teams": ["Columbus Crew", "FC Cincinnati"], "name": "Hell is Real Derby", "intensity": 9},
+    {"teams": ["DC United", "Philadelphia Union"], "name": "Battle of the Beltway Extended", "intensity": 6},
+    {"teams": ["San Jose Earthquakes", "Los Angeles Galaxy"], "name": "California Clásico", "intensity": 7},
+    {"teams": ["Houston Dynamo", "FC Dallas"], "name": "Texas Derby", "intensity": 8},
+    {"teams": ["Colorado Rapids", "Real Salt Lake"], "name": "Rocky Mountain Cup", "intensity": 8},
+    {"teams": ["CF Montreal", "Toronto FC"], "name": "Canadian Derby", "intensity": 8},
+    {"teams": ["CF Montreal", "Vancouver Whitecaps"], "name": "Canadian Derby", "intensity": 7},
+    {"teams": ["Toronto FC", "Vancouver Whitecaps"], "name": "Canadian Derby", "intensity": 7},
+    {"teams": ["Atlanta Utd", "Orlando City"], "name": "Southern Derby", "intensity": 7},
+    {"teams": ["Inter Miami", "Orlando City"], "name": "Florida Cup", "intensity": 8},
+    {"teams": ["Sporting Kansas City", "St. Louis City"], "name": "Missouri Derby", "intensity": 8},
+    {"teams": ["Los Angeles Galaxy", "San Diego FC"], "name": "SoCal Derby", "intensity": 7},
+    {"teams": ["Los Angeles FC", "San Diego FC"], "name": "SoCal Derby", "intensity": 6},
+    {"teams": ["New England Revolution", "New York Red Bulls"], "name": "Atlantic Cup", "intensity": 6},
+    {"teams": ["Minnesota United", "Sporting Kansas City"], "name": "Plains Derby", "intensity": 5}
+  ]
+}

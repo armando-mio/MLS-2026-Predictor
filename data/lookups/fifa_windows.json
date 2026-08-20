@@ -1,0 +1,37 @@
+{
+  "windows": [
+    {"start": "2022-01-24", "end": "2022-02-01", "name": "January 2022"},
+    {"start": "2022-03-21", "end": "2022-03-29", "name": "March 2022"},
+    {"start": "2022-06-01", "end": "2022-06-14", "name": "June 2022"},
+    {"start": "2022-09-19", "end": "2022-09-27", "name": "September 2022"},
+    {"start": "2022-11-14", "end": "2022-12-18", "name": "FIFA World Cup 2022"},
+
+    {"start": "2023-03-20", "end": "2023-03-28", "name": "March 2023"},
+    {"start": "2023-06-12", "end": "2023-06-20", "name": "June 2023"},
+    {"start": "2023-07-20", "end": "2023-08-20", "name": "Gold Cup / Leagues Cup 2023"},
+    {"start": "2023-09-04", "end": "2023-09-12", "name": "September 2023"},
+    {"start": "2023-10-09", "end": "2023-10-17", "name": "October 2023"},
+    {"start": "2023-11-13", "end": "2023-11-21", "name": "November 2023"},
+
+    {"start": "2024-03-18", "end": "2024-03-26", "name": "March 2024"},
+    {"start": "2024-06-03", "end": "2024-06-11", "name": "June 2024"},
+    {"start": "2024-06-14", "end": "2024-07-14", "name": "Copa America 2024"},
+    {"start": "2024-09-02", "end": "2024-09-10", "name": "September 2024"},
+    {"start": "2024-10-07", "end": "2024-10-15", "name": "October 2024"},
+    {"start": "2024-11-11", "end": "2024-11-19", "name": "November 2024"},
+
+    {"start": "2025-03-17", "end": "2025-03-25", "name": "March 2025"},
+    {"start": "2025-06-02", "end": "2025-06-10", "name": "June 2025"},
+    {"start": "2025-06-15", "end": "2025-07-13", "name": "FIFA Club World Cup 2025"},
+    {"start": "2025-09-01", "end": "2025-09-09", "name": "September 2025"},
+    {"start": "2025-10-06", "end": "2025-10-14", "name": "October 2025"},
+    {"start": "2025-11-10", "end": "2025-11-18", "name": "November 2025"},
+
+    {"start": "2026-03-23", "end": "2026-03-31", "name": "March 2026"},
+    {"start": "2026-06-01", "end": "2026-06-09", "name": "June 2026 (pre-WC)"},
+    {"start": "2026-06-11", "end": "2026-07-19", "name": "FIFA World Cup 2026"},
+    {"start": "2026-09-07", "end": "2026-09-15", "name": "September 2026"},
+    {"start": "2026-10-05", "end": "2026-10-13", "name": "October 2026"},
+    {"start": "2026-11-09", "end": "2026-11-17", "name": "November 2026"}
+  ]
+}
