@@ -26,6 +26,7 @@ def simulate_remaining_season(
     standings: dict,
     remaining_matches: list[dict],
     n_sims: int = MC_SIMULATIONS,
+    seed: int | None = 42,
 ) -> pd.DataFrame:
     """
     Simulate the remaining regular season matches.
@@ -38,11 +39,16 @@ def simulate_remaining_season(
         Each dict: {"home": str, "away": str, "prob_h": float, "prob_d": float, "prob_a": float}
     n_sims : int
         Number of Monte Carlo simulations.
+    seed : int | None
+        Random seed for reproducible simulations.
 
     Returns
     -------
     pd.DataFrame with columns: team, avg_points, playoff_pct, avg_position
     """
+    if seed is not None:
+        np.random.seed(seed)
+
     logger.info("Running %d season simulations with %d remaining matches …",
                 n_sims, len(remaining_matches))
 
@@ -119,6 +125,7 @@ def simulate_season_detailed(
     standings: dict,
     remaining_matches: list[dict],
     n_sims: int = MC_SIMULATIONS,
+    seed: int | None = 42,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Enhanced season simulation with per-team stats and position distributions.
@@ -134,6 +141,8 @@ def simulate_season_detailed(
                      "lambda_h": float, "lambda_a": float}
     n_sims : int
         Number of Monte Carlo simulations.
+    seed : int | None
+        Random seed for reproducible simulations.
 
     Returns
     -------
@@ -143,6 +152,9 @@ def simulate_season_detailed(
     position_dist_df : pd.DataFrame
         Team × position matrix showing frequency (%) of finishing in each rank.
     """
+    if seed is not None:
+        np.random.seed(seed)
+
     logger.info("Running %d detailed season simulations with %d remaining matches …",
                 n_sims, len(remaining_matches))
 
@@ -338,6 +350,7 @@ def simulate_playoff_bracket(
     seeded_teams: list[str],
     elo_ratings: dict[str, float],
     n_sims: int = MC_SIMULATIONS,
+    seed: int | None = 42,
 ) -> pd.DataFrame:
     """
     Simulate the MLS Cup Playoffs for one conference under official regulations:
@@ -354,11 +367,16 @@ def simulate_playoff_bracket(
         Current Elo for each team.
     n_sims : int
         Number of simulations.
+    seed : int | None
+        Random seed for reproducible simulations.
 
     Returns
     -------
     pd.DataFrame with columns: team, round1_pct, conf_semi_pct, conf_final_pct, champion_pct
     """
+    if seed is not None:
+        np.random.seed(seed)
+
     from mls_predictor.elo import expected_score
 
     champion_counts = defaultdict(int)
