@@ -464,36 +464,88 @@ hr {
 }
 
 .created-by-label {
-    color: #cbd5e1;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.45rem;
-    letter-spacing: 0.3px;
+    color: #94a3b8;
+    font-size: 0.76rem;
+    font-weight: 500;
+    margin-bottom: 0.55rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* ── LinkedIn Button ── */
-.linkedin-btn {
+.created-by-name {
+    color: #f1f5f9;
+    font-weight: 600;
+}
+
+.social-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+    margin-bottom: 0.45rem;
+}
+
+.social-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    background: linear-gradient(135deg, #0A66C2 0%, #004182 100%);
-    color: #ffffff !important;
-    text-decoration: none !important;
-    padding: 0.5rem 1.1rem;
-    border-radius: 8px;
-    font-size: 0.84rem;
+    gap: 0.4rem;
+    padding: 0.42rem 0.6rem;
+    border-radius: 7px;
+    font-size: 0.8rem;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(10, 102, 194, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── LinkedIn & GitHub Buttons ── */
+.linkedin-btn {
+    background: linear-gradient(135deg, #0A66C2 0%, #004182 100%);
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 2px 6px rgba(10, 102, 194, 0.25);
 }
 .linkedin-btn:hover {
     background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
     transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(10, 102, 194, 0.5);
+    box-shadow: 0 4px 12px rgba(10, 102, 194, 0.45);
     color: #ffffff !important;
+}
+
+.github-btn {
+    background: linear-gradient(135deg, #24292e 0%, #161b22 100%);
+    color: #f1f5f9 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.github-btn:hover {
+    background: linear-gradient(135deg, #30363d 0%, #21262d 100%);
+    border-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: #ffffff !important;
+}
+
+.repo-link-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 7px;
+    padding: 0.42rem 0.65rem;
+    color: #94a3b8 !important;
+    font-size: 0.74rem;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+.repo-link-btn:hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: #38bdf8;
+    color: #38bdf8 !important;
+    transform: translateY(-1px);
 }
 
 /* ── Sidebar Navigation Widget ── */
@@ -627,8 +679,12 @@ hr {
 }
 
 .creator-card {
-    text-align: center;
-    padding: 0.35rem 0 0.2rem 0;
+    text-align: left;
+    padding: 0.65rem 0.75rem 0.55rem 0.75rem;
+    background: rgba(20, 30, 43, 0.55);
+    border: 1px solid #243346;
+    border-radius: 9px;
+    margin-top: 0.45rem;
 }
 
 
