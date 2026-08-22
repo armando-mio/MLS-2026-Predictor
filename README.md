@@ -94,6 +94,10 @@ MLS-2026-Predictor/
 │   └── shap_utils.py           # SHAP TreeExplainer & feature attribution helpers
 ├── models/                     # Saved joblib models and preprocessing transformers
 ├── notebooks/                  # Step-by-step exploratory data analysis & experiments
+├── reports/                    # Publication-grade visual analytics & empirical studies
+│   ├── figures/                # High-resolution (300 DPI) chart exports (Figs 1–6)
+│   ├── generate_charts.py      # Automated chart generation script
+│   └── README.md               # Empirical findings and validation reports
 ├── streamlit_app/              # Web application
 │   ├── assets/                 # Custom stylesheet (style.css)
 │   ├── pages/                  # Multipage apps (How_MLS_Works.py)
